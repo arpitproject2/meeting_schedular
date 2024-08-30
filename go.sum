@@ -1,0 +1,4 @@
+github.com/arpitproject2/meeting_schedular v0.0.0-20240830160050-8047a4e55931 h1:P7MBPB6XsuTGB9KamAimpn8Ym8EPKu6wGU0swH2u3GQ=
+github.com/arpitproject2/meeting_schedular v0.0.0-20240830160050-8047a4e55931/go.mod h1:X7EeyiGNjP33zI9HWYxQurJ5rwCX0qMXYc3Nb20VXbo=
+github.com/lib/pq v1.10.9 h1:YXG7RB+JIjhP29X+OtkiDnYaXQwpS4JEWq7dtCCRUEw=
+github.com/lib/pq v1.10.9/go.mod h1:AlVN5x4E4T544tWzH6hKfbfQvm3HdbOxrmggDNAPY9o=

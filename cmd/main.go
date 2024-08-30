@@ -2,19 +2,16 @@ package main
 
 import (
 	"log"
+	"meeting_scheduler/controllers"
+	"meeting_scheduler/internal/db"
 	"net/http"
-
-	"github.com/arpitproject2/meeting_schedular/config"
-	"github.com/arpitproject2/meeting_schedular/internal/controllers"
 )
 
 func main() {
-	// Load configuration
-	cfg := config.LoadConfig()
+	// Simple route handler
+	db.Connect()
+	http.HandleFunc("/meeting", controllers.GetMeeting)
 
-	// Initialize routes
-	http.HandleFunc("/meetings", controllers.CreateMeeting)
-
-	log.Println("Starting server on :8080")
-	log.Fatal(http.ListenAndServe(":8080", nil))
+    log.Println("Starting server on :8080")
+    log.Fatal(http.ListenAndServe(":8080", nil))
 }
