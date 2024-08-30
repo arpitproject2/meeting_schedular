@@ -2,8 +2,8 @@ package main
 
 import (
 	"log"
-	"meeting_scheduler/controllers"
 	"meeting_scheduler/internal/db"
+	"meeting_scheduler/controllers"
 	"net/http"
 )
 

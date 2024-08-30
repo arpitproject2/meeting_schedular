@@ -2,16 +2,25 @@ package db
 
 import (
 	"database/sql"
-	//"github.com/lib/pq"
 	"log"
+
+	_ "github.com/lib/pq"
 )
 
 var DB *sql.DB
 
 func Connect() {
 	var err error
-	DB, err = sql.Open("postgres", "user=postgres dbname=meetingdb sslmode=disable")
+	connStr := "user=yourusername password=yourpassword dbname=meetingdb sslmode=disable"
+	DB, err = sql.Open("postgres", connStr)
 	if err != nil {
 		log.Fatal(err)
 	}
+
+	err = DB.Ping()
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	log.Println("Connected to the database")
 }
